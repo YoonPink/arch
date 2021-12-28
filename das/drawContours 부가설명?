@@ -1,0 +1,7 @@
+cv2.drawContours(image, contours, contourIdx, color[, thickness[, lineType[, hierarchy[, maxLevel[, offset]]]]])에서
+Parameters
+1.image – 원본 이미지
+2.contours – contours정보.
+3.contourIdx – contours list type에서 몇번째 contours line을 그릴 것인지. -1 이면 전체
+4.color – contours line color
+5.thickness – contours line의 두께. 음수이면 contours line의 내부를 채움.
