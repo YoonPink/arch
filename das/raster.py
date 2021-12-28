@@ -11,7 +11,7 @@ img = cv2.imread('d.png') #파일명
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) #흑백사진으로 변환
 ret, binary = cv2.threshold(gray, 240, 255, 0) 
 
-contours, hierachy = cv2.findContours(binary, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+contours, hierachy = cv2.findContours(binary, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE) #cv2.findContours 원본이미지를 직접수정함 
 image = cv2.drawContours(img, contours, -1, (0,255,0), 3)
 
 poly_objs = []
