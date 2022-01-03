@@ -17,7 +17,7 @@ image = cv2.drawContours(img, contours, -1, (0,255,0), 3)
 poly_objs = []
 for i in range(len(contours)):
     if (i > 0) and (len(contours[i]))>2:
-        poly_objs.append(Polygon(np.squeeze(contours[i]))) #poly_objs라는 list에 contours의 점들을 꼭지점으로 가지는 폴리곤을 만들어 넣어
+        poly_objs.append(Polygon(np.squeeze(contours[i]))) #poly_objs라는 list에 contours의 점들을 꼭지점으로 가지는 폴리곤을 만들어 넣음
 
 polygons = poly_objs
 polygons = gpd.GeoDataFrame(polygons, columns = ['geometry'])
